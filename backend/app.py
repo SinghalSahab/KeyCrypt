@@ -9,7 +9,8 @@ def create_app():
     app.config.from_object(Config)
 
     # Initialize CORS
-    CORS(app, origins=app.config['CORS_ORIGINS'])
+    CORS(app, origins=["https://keycrypt-frontend-f6lt.onrender.com/"])
+
 
     # Register blueprints
     app.register_blueprint(game_bp, url_prefix='/api')
