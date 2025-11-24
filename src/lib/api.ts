@@ -18,7 +18,7 @@ async function tryFetch<T>(url: string, options?: RequestInit): Promise<T> {
 
 export async function generatePuzzle(level: number): Promise<GeneratePuzzleResponse> {
   try {
-    return await tryFetch<GeneratePuzzleResponse>(`${API_BASE_URL}/generate?level=${level}`);
+    return await tryFetch<GeneratePuzzleResponse>(`${API_BASE_URL}/api/generate?level=${level}`);
   } catch (error) {
     // Fallback mode for when backend is not available
     return getRandomFallbackData(level);
@@ -27,7 +27,7 @@ export async function generatePuzzle(level: number): Promise<GeneratePuzzleRespo
 
 export async function validateGuess(guess: string, sessionId: string): Promise<ValidationResponse> {
   try {
-    return await tryFetch<ValidationResponse>(`${API_BASE_URL}/validate`, {
+    return await tryFetch<ValidationResponse>(`${API_BASE_URL}/api/validate`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -59,7 +59,7 @@ export async function validateGuess(guess: string, sessionId: string): Promise<V
 
 export async function getLevels(): Promise<LevelsResponse> {
   try {
-    return await tryFetch<LevelsResponse>(`${API_BASE_URL}/levels`);
+    return await tryFetch<LevelsResponse>(`${API_BASE_URL}/api/levels`);
   } catch (error) {
     // Fallback levels
     return { levels: fallbackLevels };
@@ -72,7 +72,7 @@ export async function getGameStatus(sessionId: string): Promise<{
   attempts: number;
   max_attempts: number;
 }> {
-  const response = await fetch(`${API_BASE_URL}/game-status?session_id=${sessionId}`);
+  const response = await fetch(`${API_BASE_URL}/api/game-status?session_id=${sessionId}`);
 
   if (!response.ok) {
     const error = await response.json();
