@@ -84,7 +84,7 @@ export default function GameBoard() {
             <BackButton onClick={handleChangeLevel} variant="header" />
             <div className="text-center flex-1">
               <h1 className="text-3xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent">
-                CryptoWordle
+                KeyCrypt
               </h1>
               <p className="text-gray-600 text-sm">
                 Decrypt the word to win!
