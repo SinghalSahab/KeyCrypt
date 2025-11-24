@@ -9,7 +9,11 @@ def create_app():
     app.config.from_object(Config)
 
     # Initialize CORS
-    CORS(app, origins=["https://keycrypt-frontend-f6lt.onrender.com/"])
+    CORS(app, resources={r"/*": {
+    "origins": app.config['CORS_ORIGINS'],
+    "methods": ["GET", "POST", "OPTIONS"],
+    "allow_headers": ["Content-Type", "Authorization"]
+}})
 
 
     # Register blueprints
