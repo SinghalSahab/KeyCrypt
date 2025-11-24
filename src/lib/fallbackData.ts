@@ -76,6 +76,6 @@ export function getRandomFallbackData(level: number) {
     level: level,
     hint1: 'This is a demo mode - backend not connected',
     hint2: 'Try installing the backend dependencies',
-    hint3: 'Check the setup instructions in README-CryptoWordle.md'
+    hint3: 'Check the setup instructions in README.md'
   };
 }

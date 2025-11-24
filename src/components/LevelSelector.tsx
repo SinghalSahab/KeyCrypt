@@ -62,7 +62,7 @@ export default function LevelSelector({ onLevelSelect, isLoading = false }: Leve
         {/* Header */}
         <AnimatedContainer animation="fade-in" className="text-center mb-12">
           <h1 className="text-5xl font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mb-6">
-            CryptoWordle
+          KeyCrypt
           </h1>
           <p className="text-xl text-gray-700 mb-3">
             Decrypt the encrypted word to win!

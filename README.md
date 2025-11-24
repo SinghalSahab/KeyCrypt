@@ -1,4 +1,4 @@
-# CryptoWordle 🎮🔐
+# KeyCrypt 🎮🔐
 
 A cryptographic Wordle game where players decrypt 5-letter words encrypted with various ciphers. Features progressive difficulty levels from classical ciphers (Caesar) to modern encryption (RSA), with Wordle-style feedback and an intelligent hint system.
 
@@ -116,7 +116,7 @@ The frontend will be available at `http://localhost:3000`
 
 ## Educational Value
 
-CryptoWordle teaches players about:
+KeyCrypt teaches players about:
 - Historical ciphers and their weaknesses
 - Modern encryption principles
 - Pattern recognition and frequency analysis
